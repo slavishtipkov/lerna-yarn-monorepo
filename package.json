@@ -6,17 +6,33 @@
   ],
   "scripts": {
     "check-types": "tsc",
-    "check-types:watch": "tsc --watch"
-  },
-  "devDependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.4.4",
-    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
-    "@babel/preset-typescript": "^7.3.3",
-    "lerna": "^3.5.1",
-    "typescript": "^3.5.2"
+    "check-types:watch": "tsc --watch",
+    "lint:ts": "tslint 'packages/**/*.ts{,x}'",
+    "prebuild": "tsc",
+    "build": "lerna exec --parallel 'BABEL_ENV=build babel --root-mode upward src --out-dir dist --source-maps --extensions .ts,.tsx --delete-dir-on-start --no-comments'"
   },
   "dependencies": {
     "@types/react": "^16.8.20",
     "@types/react-dom": "^16.8.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/node": "^12.0.8",
+    "babel-core": "7.0.0-bridge.0",
+    "lerna": "^3.5.1",
+    "react": "^16.8.6",
+    "styled-components": "^4.3.1",
+    "tslint": "^5.17.0",
+    "tslint-react": "^4.0.0",
+    "typescript": "^3.5.2"
+  },
+  "resolutions": {
+    "babel-core": "^7.0.0-bridge.0"
   }
 }

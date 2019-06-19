@@ -1,3 +1,5 @@
 export default () => {
-  console.log("Yes");
+  const text = "GGMU";
+
+  return text;
 };
