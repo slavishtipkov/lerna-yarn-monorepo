@@ -2,7 +2,8 @@
   "name": "lerna-yarn-structure",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "test-workspaces/*"
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap --use-workspaces",
