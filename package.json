@@ -4,7 +4,19 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "check-types": "tsc",
+    "check-types:watch": "tsc --watch"
+  },
   "devDependencies": {
-    "lerna": "^3.5.1"
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/preset-typescript": "^7.3.3",
+    "lerna": "^3.5.1",
+    "typescript": "^3.5.2"
+  },
+  "dependencies": {
+    "@types/react": "^16.8.20",
+    "@types/react-dom": "^16.8.4"
   }
 }
