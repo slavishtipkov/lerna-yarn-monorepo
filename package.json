@@ -1,5 +1,5 @@
 {
-  "name": "root",
+  "name": "lerna-yarn-structure",
   "private": true,
   "workspaces": [
     "packages/*"
