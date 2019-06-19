@@ -1,5 +1,5 @@
 {
-  "name": "button",
+  "name": "@lerna-yarn-structure/button",
   "version": "1.0.1",
   "main": "lib/index.js",
   "module": "src/index.js",
