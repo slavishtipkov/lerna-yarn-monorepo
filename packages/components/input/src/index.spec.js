@@ -2,11 +2,11 @@ import React from "react";
 import renderer from "react-test-renderer";
 import "jest-styled-components";
 
-import TestInput from ".";
+import Input from ".";
 
-describe("TestInput", () => {
+describe("Input", () => {
   test("renders correctly", () => {
-    const tree = renderer.create(<TestInput />).toJSON();
+    const tree = renderer.create(<Input />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

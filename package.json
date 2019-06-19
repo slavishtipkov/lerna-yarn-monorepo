@@ -2,8 +2,7 @@
   "name": "lerna-yarn-structure",
   "private": true,
   "workspaces": [
-    "packages/*",
-    "test-workspaces/*"
+    "packages/**"
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap --use-workspaces",
@@ -32,11 +31,5 @@
     "react-test-renderer": "^16.8.6",
     "styled-components": "^4.3.1",
     "webpack": "^4.34.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm test",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   }
 }
