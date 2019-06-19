@@ -1,5 +1,5 @@
 export default () => {
-  const text = "GGMU";
+  const text = 'GGMU';
 
   return text;
 };
