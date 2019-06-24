@@ -9,7 +9,7 @@
     "prettier": true,
     "quotemark": [
       true,
-      "single",
+      "double",
       "avoid-escape",
       "avoid-template",
       "jsx-double"

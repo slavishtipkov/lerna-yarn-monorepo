@@ -14,7 +14,8 @@
     "prebuild": "tsc",
     "build": "lerna exec --parallel 'BABEL_ENV=build babel --root-mode upward src --out-dir dist --source-maps --extensions .ts,.tsx --delete-dir-on-start --no-comments'",
     "test": "jest",
-    "storybook": "start-storybook -p 6006 -c .storybook"
+    "storybook": "start-storybook -p 6006 -c .storybook",
+    "dev": "concurrently \"yarn storybook\" \"parcel packages/app/index.html\""
   },
   "dependencies": {
     "@types/react": "^16.8.20",
