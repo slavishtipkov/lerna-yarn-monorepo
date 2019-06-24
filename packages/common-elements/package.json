@@ -1,0 +1,7 @@
+{
+  "extends": "../../package.json",
+  "name": "@shared/common-elements",
+  "version": "0.0.0",
+  "main": "index.ts",
+  "license": "MIT"
+}
