@@ -20,7 +20,8 @@
     "prebuild": "tsc",
     "build": "lerna exec --parallel 'BABEL_ENV=build babel --root-mode upward src --out-dir dist --source-maps --extensions .ts,.tsx --delete-dir-on-start --no-comments'",
     "test": "jest",
-    "storybook": "start-storybook -p 6006 -c .storybook"
+    "storybook": "start-storybook -p 6006 -c .storybook",
+    "dev": "concurrently \"yarn app:start\" \"yarn storybook\""
   },
   "dependencies": {
     "@storybook/react": "^5.1.9",
@@ -46,6 +47,7 @@
     "babel-loader": "^8.0.6",
     "babel-preset-react-app": "^9.0.0",
     "clean-webpack-plugin": "^3.0.0",
+    "concurrently": "^4.1.1",
     "dotenv-webpack": "^1.7.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
