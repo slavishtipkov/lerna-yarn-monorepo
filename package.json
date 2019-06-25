@@ -6,8 +6,8 @@
     "packages/*"
   ],
   "scripts": {
-    "app:start": "webpack-dev-server --config ./webpack.config.js --open --mode development",
-    "app:build": "webpack --config ./webpack.config.js --mode production",
+    "app:start": "webpack-dev-server --open --config webpack/webpack.config.js --env.env=dev",
+    "app:build": "webpack --config webpack/webpack.config.js --env.env=prod",
     "serve": "npx http-server dist",
     "bootstrap": "lerna bootstrap",
     "check-types": "tsc",
@@ -45,6 +45,7 @@
     "babel-loader": "^8.0.6",
     "babel-preset-react-app": "^9.0.0",
     "clean-webpack-plugin": "^3.0.0",
+    "dotenv-webpack": "^1.7.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.0.0-beta6",
@@ -69,7 +70,8 @@
     "typescript": "^3.5.2",
     "webpack": "^4.35.0",
     "webpack-cli": "^3.3.5",
-    "webpack-dev-server": "^3.7.2"
+    "webpack-dev-server": "^3.7.2",
+    "webpack-merge": "^4.2.1"
   },
   "resolutions": {
     "@types/react": "^16.8.20",
