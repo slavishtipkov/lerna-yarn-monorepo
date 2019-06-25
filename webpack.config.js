@@ -1,16 +1,16 @@
 module.exports = {
-  entry: "./apps/react-base-app/src/index.js",
+  entry: "./apps/react-base-app/src/index.tsx",
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js|ts)x$/,
         exclude: /node_modules/,
         use: ["babel-loader"]
       }
     ]
   },
   resolve: {
-    extensions: ["*", ".js", ".jsx"]
+    extensions: ["*", ".js", ".ts", ".tsx"]
   },
   output: {
     path: __dirname + "/dist",

@@ -10,9 +10,9 @@
     "rootDir": "./",
     "baseUrl": "./",
     "paths": {
-      "*": ["node_modules", "packages"]
+      "*": ["node_modules", "packages", "apps"]
     }
   },
-  "include": ["packages"],
+  "include": ["packages", "apps"],
   "exclude": ["node_modules"]
 }
