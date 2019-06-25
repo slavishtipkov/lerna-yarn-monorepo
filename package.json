@@ -8,6 +8,7 @@
   "scripts": {
     "app:start": "webpack-dev-server --open --config webpack/webpack.config.js --env.env=dev",
     "app:build": "webpack --config webpack/webpack.config.js --env.env=prod",
+    "app:analyze": "yarn app:build -- --env.addon=bundleanalyze --env.addon=bundlevisualizer",
     "serve": "npx http-server dist",
     "bootstrap": "lerna bootstrap",
     "check-types": "tsc",
@@ -69,9 +70,11 @@
     "tslint-react": "^4.0.0",
     "typescript": "^3.5.2",
     "webpack": "^4.35.0",
+    "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^3.3.5",
     "webpack-dev-server": "^3.7.2",
-    "webpack-merge": "^4.2.1"
+    "webpack-merge": "^4.2.1",
+    "webpack-visualizer-plugin": "^0.1.11"
   },
   "resolutions": {
     "@types/react": "^16.8.20",
