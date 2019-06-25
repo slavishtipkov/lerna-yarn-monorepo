@@ -7,12 +7,6 @@
   ],
   "rules": {
     "prettier": true,
-    "quotemark": [
-      true,
-      "double",
-      "avoid-escape",
-      "avoid-template",
-      "jsx-double"
-    ]
+    "quotemark": [true, "double", "avoid-escape", "avoid-template"]
   }
 }
