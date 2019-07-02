@@ -22,7 +22,8 @@ module.exports = (api) => {
     ],
     plugins: [
       "@babel/plugin-proposal-class-properties",
-      "@babel/proposal-object-rest-spread"
+      "@babel/proposal-object-rest-spread",
+      "babel-plugin-syntax-dynamic-import"
     ],
     env: {
       build: {

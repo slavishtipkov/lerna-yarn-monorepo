@@ -1,9 +1,0 @@
-{
-  "name": "@shared/common-forms",
-  "version": "0.0.0",
-  "main": "index.ts",
-  "license": "MIT",
-  "dependencies": {
-    "@shared/common-elements": "0.0.0"
-  }
-}

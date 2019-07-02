@@ -1,12 +1,26 @@
-import * as React from "react";
+import React, { Suspense, lazy } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import { SimpleForm } from "@shared/common-forms";
+const Login = lazy(() => import("../containers/login/Login"));
+const Dashboard = lazy(() => import("../containers/dashboard/Dashboard"));
+const Reports = lazy(() => import("../containers/reports/Reports"));
 
-const App: React.FunctionComponent<{ title: string }> = ({ title }) => {
+import Navigation from "./navigation/Navigation";
+
+const App: React.FC<{}> = ({}) => {
   return (
     <div>
-      <div>{title}</div>
-      <SimpleForm />
+      <Router>
+        <Navigation />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Switch>
+            <Route path="/" exact component={Dashboard} />
+            <Route path="/login" component={Login} />
+            <Route path="/reports" component={Reports} />
+            <Route component={Dashboard} />
+          </Switch>
+        </Suspense>
+      </Router>
     </div>
   );
 };

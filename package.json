@@ -3,14 +3,15 @@
   "version": "0.0.0",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "apps/*"
   ],
   "scripts": {
     "app:start": "webpack-dev-server --open --config webpack/webpack.config.js --env.env=dev",
     "app:build": "webpack --config webpack/webpack.config.js --env.env=prod",
     "app:analyze": "yarn app:build -- --env.addon=bundleanalyze --env.addon=bundlevisualizer",
     "serve": "npx http-server dist",
-    "bootstrap": "lerna bootstrap",
+    "bootstrap": "lerna bootstrap --use-workspaces",
     "check-types": "tsc",
     "check-types:watch": "tsc --watch",
     "lint": "run-p -c lint:*",
@@ -27,8 +28,12 @@
     "@storybook/react": "^5.1.9",
     "@types/react": "^16.8.20",
     "@types/react-dom": "^16.8.4",
+    "@types/react-router": "^5.0.2",
+    "@types/react-router-dom": "^4.3.4",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
@@ -45,6 +50,7 @@
     "@types/storybook__react": "^4.0.2",
     "babel-core": "7.0.0-bridge.0",
     "babel-loader": "^8.0.6",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-preset-react-app": "^9.0.0",
     "clean-webpack-plugin": "^3.0.0",
     "concurrently": "^4.1.1",
