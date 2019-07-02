@@ -1,16 +1,26 @@
-var express = require("express");
-var app = express();
+const OktaJwtVerifier = require("@okta/jwt-verifier");
 
-// respond with "hello world" when a GET request is made to the homepage
-app.post("/", function(req, res) {
-  console.log(req);
-  console.log(9999999999999);
-  console.log(res);
-  res.send("hello world");
+const oktaJwtVerifier = new OktaJwtVerifier({
+  issuer: "https://dev-880339.okta.com/oauth2/default" // required
 });
 
-var port = 3001;
+oktaJwtVerifier
+  .verifyAccessToken(accessTokenString, expectedAud)
+  .then((jwt) => {
+    // the token is valid (per definition of 'valid' above)
+    console.log(jwt.claims);
+  })
+  .catch((err) => {
+    // a validation failed, inspect the error
+  });
 
-app.listen(port, function() {
-  console.log("Express listening on port " + port + " ...");
-});
+// Passing a string for expectedAud
+oktaJwtVerifier
+  .verifyAccessToken(accessTokenString, "api://default")
+  .then((jwt) => console.log("token is valid"))
+  .catch((err) => console.warn("token failed validation"));
+
+oktaJwtVerifier
+  .verifyAccessToken(accessTokenString, ["api://special", "api://default"])
+  .then((jwt) => console.log("token is valid"))
+  .catch((err) => console.warn("token failed validation"));

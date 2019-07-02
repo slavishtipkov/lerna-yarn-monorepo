@@ -1,5 +1,7 @@
 import React from "react";
 
+export const requestUrl = `https://dev-880339.okta.com/oauth2/default/v1/authorize?client_id=0oatobvdnFGs0SkLI356&response_type=token&scope=openid&redirect_uri=http://localhost:3000/implicit/callback&state=state-296bc9a0-a2a2-4a57-be1a-d0e2fd9bb601&nonce=foo'`;
+//
 export default class Login extends React.Component<ILoginProps, ILoginState> {
   constructor(props: ILoginProps) {
     super(props);
@@ -13,9 +15,7 @@ export default class Login extends React.Component<ILoginProps, ILoginState> {
     return (
       <div className="login">
         {this.state.authToken.length === 0 && (
-          <a href="https://dev-880339.okta.com/home/oidc_client/0oatobvdnFGs0SkLI356/aln177a159h7Zf52X0g8">
-            Okta Login
-          </a>
+          <a href={requestUrl}>Okta Login</a>
         )}
       </div>
     );

@@ -25,6 +25,7 @@
     "dev": "concurrently \"yarn app:start\" \"yarn storybook\""
   },
   "dependencies": {
+    "@okta/jwt-verifier": "^1.0.0",
     "@overnightjs/core": "^1.6.9",
     "@overnightjs/logger": "^1.1.9",
     "@storybook/react": "^5.1.9",
