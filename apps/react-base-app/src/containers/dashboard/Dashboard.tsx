@@ -1,4 +1,6 @@
 import React from "react";
+import { Wrapper } from "@shared/ui";
+import { Button } from "@shared/ui";
 
 export default class Dashboard extends React.Component<
   IDashboardProps,
@@ -16,7 +18,13 @@ export default class Dashboard extends React.Component<
   }
 
   render() {
-    return <div>Dashboard</div>;
+    return (
+      <Wrapper>
+        <div>Dashboard</div>
+        <Button primary>Primary</Button>
+        <Button>Button</Button>
+      </Wrapper>
+    );
   }
 }
 

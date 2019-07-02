@@ -5,12 +5,20 @@ export default class Login extends React.Component<ILoginProps, ILoginState> {
     super(props);
 
     this.state = {
-      authToken: "No Auth Token!"
+      authToken: ""
     };
   }
 
   render() {
-    return <div className="login">{this.state.authToken}</div>;
+    return (
+      <div className="login">
+        {this.state.authToken.length === 0 && (
+          <a href="https://dev-880339.okta.com/home/oidc_client/0oatobvdnFGs0SkLI356/aln177a159h7Zf52X0g8">
+            Okta Login
+          </a>
+        )}
+      </div>
+    );
   }
 }
 
